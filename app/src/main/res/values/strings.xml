@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyCamera</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_camera">No camera !</string>
+    <string name="Take_photo_failed">Take photo failed !</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="save">Save</string>
+</resources>

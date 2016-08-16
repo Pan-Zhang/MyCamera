@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 预览画布 -->
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 闪光灯、前置摄像头、后置摄像头、聚焦 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <View
+            android:id="@+id/focus_index"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/camera_focus"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/flash_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClick"
+            android:padding="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/camera_flash_off" />
+
+        <ImageView
+            android:id="@+id/camera_flip_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            android:padding="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/camera_flip" />
+
+        <!-- 底部按钮 -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="#a0000000"
+            android:padding="5dp" >
+
+            <!--<Button-->
+                <!--android:id="@+id/search"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:background="@null"-->
+                <!--android:drawablePadding="3dp"-->
+                <!--android:drawableTop="@drawable/ic_search_selector"-->
+                <!--android:onClick="onClick"-->
+                <!--android:text="搜图"-->
+                <!--android:textColor="@drawable/row_selector_text" />-->
+
+            <ImageView
+                android:id="@+id/action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:src="@drawable/btn_shutter_photo" />
+
+            <Button
+                android:id="@+id/cancel_take"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:onClick="onClick"
+                android:text="取消"
+                android:textColor="@drawable/row_selector_text" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>
